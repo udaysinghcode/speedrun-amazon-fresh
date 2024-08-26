@@ -1,73 +1,50 @@
-#search-wrapper {
-  display: flex;
-  width: 100%;
-  padding: 10px;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  box-sizing: border-box;
+body {
+  background-color: #111;
+  color: #00ffff;
 }
 
-#nav-search-bar-form {
-  flex: 1;
-  margin-right: 10px;
+#speedrun-ui {
+  font-family: 'Orbitron', sans-serif;
+  z-index: 9999999 !important;
 }
 
-#grocery-list-container {
-  flex: 1;
-  display: flex;
-  align-items: center;
+.text-neon-blue {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
 }
 
-#grocery-list {
-  flex: 1;
-  height: 40px;
-  margin-right: 10px;
-  padding: 5px;
-  border: 1px solid #a6a6a6;
-  border-radius: 3px;
-  font-size: 14px;
+.bg-neon-purple {
+  background-color: #8a2be2;
 }
 
-#grocery-list-container button {
-  width: 100px;
-  height: 40px;
-  background-color: #febd69;
-  border: 1px solid #c89411;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 14px;
+.border-neon-blue {
+  border-color: #00ffff;
 }
 
-#grocery-list-instructions {
-  text-align: center;
-}
-
-#stopwatch {
-  font-size: 24px;
+.cyberpunk-button-green {
+  background: linear-gradient(45deg, #00ff00, #00ffff);
+  border: none;
+  color: black;
   font-weight: bold;
-  margin: 10px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-#shopping-complete-popup {
+.cyberpunk-button-red {
+  background: linear-gradient(45deg, #ff0000, #ff00ff);
+  border: none;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-button-green:hover,
+.cyberpunk-button-red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.hidden {
   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  z-index: 9999;
-  text-align: center;
-}
-
-#shopping-complete-popup h2 {
-  margin-top: 0;
-}
-
-#final-time {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
 }
