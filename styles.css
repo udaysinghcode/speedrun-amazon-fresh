@@ -1,0 +1,73 @@
+#search-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+#nav-search-bar-form {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#grocery-list-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#grocery-list {
+  flex: 1;
+  height: 40px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+#grocery-list-container button {
+  width: 100px;
+  height: 40px;
+  background-color: #febd69;
+  border: 1px solid #c89411;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#grocery-list-instructions {
+  text-align: center;
+}
+
+#stopwatch {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#shopping-complete-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  text-align: center;
+}
+
+#shopping-complete-popup h2 {
+  margin-top: 0;
+}
+
+#final-time {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Grocery Speed Run",
+  "version": "1.0",
+  "description": "Speed run through your grocery list on Amazon Fresh.",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": [
+    "https://www.amazon.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["content.js", "contentScript.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
