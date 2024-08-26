@@ -70,9 +70,10 @@ async function searchItem(item, tabId) {
 
 function updateSpeedrunUI(tabId) {
   const nextItems = currentItems.slice(currentIndex + 1, currentIndex + 4);
+  const [productName, quantity] = parseItem(currentItems[currentIndex]);
   currentState = {
-    productName: currentItems[currentIndex],
-    quantity: 1, // You may need to adjust this if you're tracking quantities
+    productName,
+    quantity,
     note: "", // Add note handling if needed
     currentIndex,
     totalItems: currentItems.length,
@@ -108,11 +109,10 @@ async function showCompletionPopup(tabId) {
 }
 
 function parseItem(item) {
-  const match = item.match(/(.+?)(?:\s*\(([^)]+)\))?(?:\s*x\s*(\d+))?$/);
+  const match = item.match(/(.+?)(?:\s*x\s*(\d+))?$/);
   const productName = match[1].trim();
-  const note = match[2] ? match[2].trim() : null;
-  const quantity = match[3] ? parseInt(match[3]) : 1;
-  return [productName, quantity, note];
+  const quantity = match[2] ? parseInt(match[2]) : 1;
+  return [productName, quantity, ""]; // We're not handling notes in this version, so it's an empty string
 }
 
 function updateStopwatch(tabId) {
